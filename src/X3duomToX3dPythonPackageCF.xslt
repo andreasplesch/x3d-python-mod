@@ -27,7 +27,6 @@
         <xsl:text>../tooltips/x3d-4.0.profile.xml</xsl:text>
     </xsl:variable>
     <xsl:variable name="x3d.tooltips.document" select="doc($x3d.tooltips.path)"/>
-    
 
 <!-- TODO
      - is it possible to output metaDiagnostics even if __init__() exception thrown on loading?
@@ -2498,7 +2497,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:text>return str(self.__value).upper()</xsl:text>
             </xsl:when>
             <xsl:when test="($fieldTypeName = 'MFBool')">
-                <xsl:text>return str(self.__value).upper().replace(',', '').replace('[', '').replace(']', '')</xsl:text>
+                <xsl:text>return str(self.__value).upper().replace(',', '')</xsl:text>
             </xsl:when>
             <xsl:when test="starts-with($fieldTypeName, 'SF') and (contains($fieldTypeName, 'Double') or contains($fieldTypeName, 'Float') or contains($fieldTypeName, 'Vec') or
                             contains($fieldTypeName, 'Int32') or contains($fieldTypeName, 'Time') or contains($fieldTypeName, 'Color') or contains($fieldTypeName, 'Rotation') or
@@ -2553,7 +2552,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:text>return str(self.__value).lower()</xsl:text>
             </xsl:when>
             <xsl:when test="($fieldTypeName = 'MFBool')">
-                <xsl:text>return str(self.__value).lower().replace(',', '').replace('[', '').replace(']', '')</xsl:text>
+                <xsl:text>return str(self.__value).lower().replace(',', '')</xsl:text>
             </xsl:when>
             <xsl:when test="starts-with($fieldTypeName, 'SF') and (contains($fieldTypeName, 'Double') or contains($fieldTypeName, 'Float') or contains($fieldTypeName, 'Vec') or
                             contains($fieldTypeName, 'Int32') or contains($fieldTypeName, 'Time') or contains($fieldTypeName, 'Color') or contains($fieldTypeName, 'Rotation') or
@@ -2976,7 +2975,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     X3D_XML_SCHEMA_ATTRIBUTES_4_0 = "xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'"
     X3D_XML_SCHEMA_ATTRIBUTES_4_1 = "xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.1.xsd'"
     VRML97_HEADER = '#VRML V2.0 utf8'
-    CLASSIC_VRML_HEADER_PREFIX = '#VRML V' # followed by X3D version number
+    CLASSIC_VRML_HEADER_PREFIX = '#X3D V' # followed by X3D version number
     CLASSIC_VRML_HEADER_SUFFIX = ' utf8'
 
     # TODO confirm JSON Schema header
@@ -3160,7 +3159,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:sort select="(@name = 'IS')"/>
                 <xsl:sort select="(@name = 'USE')"/>
                 <xsl:sort select="(@name = 'DEF')"/>
-                <xsl:sort select="(@type='MFNode')"/>
+                <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                 <xsl:sort select="(@type='SFNode') and not(@name = 'IS') and not(@name = 'metadata')"/>
                 <xsl:sort select="not(contains(@type,'Node')) and not(@name = 'DEF') and not(@name = 'USE') and not(@name = 'class') and not(@name = 'id') and not(@name = 'style')"/>
 
@@ -3242,7 +3242,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:sort select="(@name = 'IS')"/>
                 <xsl:sort select="(@name = 'USE')"/>
                 <xsl:sort select="(@name = 'DEF')"/>
-                <xsl:sort select="(@type='MFNode')"/>
+                <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                 <xsl:sort select="(@type='SFNode') and not(@name = 'IS') and not(@name = 'metadata')"/>
                 <xsl:sort select="not(contains(@type,'Node')) and not(@name = 'DEF') and not(@name = 'USE') and not(@name = 'class') and not(@name = 'id') and not(@name = 'style')"/>
                 
@@ -3316,7 +3317,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
             <xsl:sort select="(@name = 'IS')"/>
             <xsl:sort select="(@name = 'USE')"/>
             <xsl:sort select="(@name = 'DEF')"/>
-            <xsl:sort select="(@type='MFNode')"/>
+            <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
             <xsl:sort select="(@type='SFNode') and not(@name = 'IS') and not(@name = 'metadata')"/>
             <xsl:sort select="not(contains(@type,'Node')) and not(@name = 'DEF') and not(@name = 'USE') and not(@name = 'class')  and not(@name = 'id') and not(@name = 'style')"/>
 
@@ -3372,7 +3374,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:sort select="(@name = 'IS')"/>
                 <xsl:sort select="(@name = 'USE')"/>
                 <xsl:sort select="(@name = 'DEF')"/>
-                <xsl:sort select="(@type='MFNode')"/>
+            	<xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            	<xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                 <xsl:sort select="(@type='SFNode') and not(@name = 'IS') and not(@name = 'metadata')"/>
                 <xsl:sort select="not(contains(@type,'Node')) and not(@name = 'DEF') and not(@name = 'USE') and not(@name = 'class') and not(@name = 'id') and not(@name = 'style')"/>
 
@@ -3718,7 +3721,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
             <xsl:when test="(count($allFields[contains(@type,'Node')]) > 0)">
                 <!-- TODO hasComment -->
                 <xsl:for-each select="$allFields[contains(@type,'Node')]">
-                    <xsl:sort select="(@type = 'MFNode')"/>
+            	    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            	    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                     <xsl:sort select="(@type = 'SFNode')"/>
                     
                     <xsl:variable name="fieldName">
@@ -3851,6 +3855,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
         try:
             selfX3dXmlText = ''
             import xmlschema
+            # XML Security dsig namespace validation problem fixed: https://github.com/sissaschool/xmlschema/issues/357
             x3dSchemaUrl = 'https://www.web3d.org/specifications/x3d-' + validationVersion + '.xsd'
             x3dschema = xmlschema.XMLSchema(x3dSchemaUrl)
             try:
@@ -4140,11 +4145,12 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-                            <xsl:sort select="(@type='MFNode')"/>
+            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
-                            <xsl:sort select="@name" order="ascending"/>
+			    <!--<xsl:sort select="@name" order="ascending"/>-->
 
                             <xsl:variable name="fieldName">
                                 <xsl:call-template name="fieldName">
@@ -4268,7 +4274,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <!-- opening tag is unclosed since followed by attributes -->
                 <!-- output simple-type fields as JSON attributes -->
                 <xsl:for-each select="$allFields[not(contains(@type,'Node'))]">
-                    <xsl:sort select="@name[not(.='DEF') and not(.='USE')]" order="ascending"/>
+		    <xsl:sort select="@name[not(.='DEF') and not(.='USE')]" order="ascending"/>
                     <xsl:sort select="(@name = 'USE')"/>
                     <xsl:sort select="(@name = 'DEF')"/>
                     
@@ -4407,11 +4413,12 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                         </xsl:when>
                     <xsl:otherwise>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-                            <xsl:sort select="(@type='MFNode')"/>
+            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
-                            <xsl:sort select="@name" order="ascending"/>
+			    <!--<xsl:sort select="@name" order="ascending"/>-->
 
                             <xsl:variable name="fieldName">
                                 <xsl:call-template name="fieldName">
@@ -4687,11 +4694,12 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 </xsl:for-each>
                 <!-- output child SFNode/MFNode fields as child XML elements -->
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-                            <xsl:sort select="(@type='MFNode')"/>
+            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
-                            <xsl:sort select="@name" order="ascending"/>
+			    <!--<xsl:sort select="@name" order="ascending"/>-->
 
                             <xsl:variable name="fieldName">
                                 <xsl:call-template name="fieldName">
@@ -4733,7 +4741,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
         if self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
                         <xsl:text>: # walk each child in list, if any (avoid empty list recursion)
-            result += '\n' + indent + '  ' + 'children [' + '\n' + indent + '  ' + '  '
+            result += '\n' + indent + '  ' + '</xsl:text><xsl:value-of select="$fieldName"/><xsl:text> [' + '\n' + indent + '  ' + '  '
             for each in self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
                         <xsl:text>:
