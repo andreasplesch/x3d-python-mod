@@ -654,7 +654,7 @@ class Comment(_X3DStatement):
             value = SFString.DEFAULT_VALUE()
         self.__value = str(value)
     # output function - - - - - - - - - -
-    def XML(self, indentLevel=0, syntax="XML"):
+    def XML(self, indentLevel=0, syntax="XML", field="children"):
         """ <!-- XML comments are wrapped in special delimiters --> """
         result = ''
         indent = '  ' * indentLevel
