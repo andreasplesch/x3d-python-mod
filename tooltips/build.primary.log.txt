@@ -1,0 +1,11 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\tooltips build.primary
+validate:
+25 file(s) have been successfully validated.
+build.primary:
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-5.1.1.jar;.
+saxonInvocationMacro invocation: -s:x3d-4.0.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips.html -warnings:recover tooltipLanguage=English version=4.0
+Processing X3D Tooltips 4.0 in English ...
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+BUILD SUCCESSFUL (total time: 7 seconds)
