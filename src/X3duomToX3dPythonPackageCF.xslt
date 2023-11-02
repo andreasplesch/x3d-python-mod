@@ -3916,6 +3916,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <!-- opening tag is unclosed since followed by attributes -->
                 <xsl:value-of select="$elementName"/>
                 <xsl:text>'</xsl:text>
+                <!-- TODO: always output metadata containerfields value and metadata -->
                 <xsl:text>
         if (self.CONTAINERFIELD_DEFAULT() != '') &amp; (self.CONTAINERFIELD_DEFAULT() != field):
             result += " containerField='" + field + "'"</xsl:text>
