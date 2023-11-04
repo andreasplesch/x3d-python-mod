@@ -2890,8 +2890,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     </xsl:text>
     
         <xsl:variable name="tooltipText"><!-- /attribute[@name = $fieldName] -->
-            <xsl:value-of select="$elementName" />
-            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/@tooltip" disable-output-escaping="yes"/>-->
+            <!--<xsl:value-of select="$elementName" />-->
+            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/@tooltip" disable-output-escaping="yes"/>
         </xsl:variable>
         <xsl:variable name="fieldTooltip">
             <xsl:if test="(string-length(normalize-space($tooltipText)) > 0)"><!-- doc-available($x3d.tooltips.path) -->
@@ -2908,7 +2908,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:value-of select="$annotation"/>
             </xsl:when>
             <xsl:when test="(string-length(normalize-space($fieldTooltip)) > 0)">
-                <!--<xsl:value-of select="substring-before($fieldTooltip,'.')"/>-->
+                <xsl:value-of select="substring-before($fieldTooltip,'.')"/>
                 <xsl:text>.</xsl:text>
                 <xsl:message>
                     <xsl:text>*** Warning: annotation not found in X3DUOM, used tooltip as docstring for </xsl:text>
@@ -3474,13 +3474,13 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     <xsl:choose>
                         <xsl:when test="($elementName = 'meta') and ($fieldName = 'httpequiv')">
                             <!-- some field names got munged -->
-                            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = 'http-equiv']/@tooltip" disable-output-escaping="yes"/>-->
-                            <xsl:value-of select="$elementName"/>
+                            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = 'http-equiv']/@tooltip" disable-output-escaping="yes"/>
+                            <!--<xsl:value-of select="$elementName"/>-->
                         </xsl:when>
                         <xsl:otherwise>
                             <!-- some field names have underscores to avoid collisions with Python reserved words -->
-                            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = translate($fieldName,'_','')]/@tooltip" disable-output-escaping="yes"/>-->
-                            <xsl:value-of select="$elementName"/>
+                            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = translate($fieldName,'_','')]/@tooltip" disable-output-escaping="yes"/>
+                            <!--<xsl:value-of select="$elementName"/>-->
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
