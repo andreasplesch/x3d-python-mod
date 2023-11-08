@@ -3228,6 +3228,10 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
         </xsl:for-each>
         
         <xsl:text>
+    def __new__(cls, **kwargs):
+        self = super().__new__(cls, **kwargs)
+        self.callerargs == kwargs
+        return self
     def __init__(self</xsl:text>
         <!-- , XML=None -->
         <!-- field declarations as parameters -->
@@ -5138,6 +5142,6 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
 		</xsl:choose>
     </xsl:template>
 
-    <!-- ===================================================== -->
+    <!-- ===========+========================================= -->
 
 </xsl:stylesheet>
