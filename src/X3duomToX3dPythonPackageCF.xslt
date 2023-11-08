@@ -4149,9 +4149,20 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                         result += each.XML(indentLevel=indentLevel+1, syntax=syntax)</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
+                        <xsl:text>
+            for field in self.callerargs: # output fields in order of caller
+                if hasattr(self, field): # ignore any non-field arguments
+                    fielddecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                    fieldtype = fielddecl[2]()
+                    fieldvalue = getattr(self, field)
+                    if fieldtype == 'SFNode':
+                        result += fieldvalue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                    if fieldtype == 'MFNode':
+                        for each in fieldvalue:
+                            result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)</xsl:text>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
-            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
+                    		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                    		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
