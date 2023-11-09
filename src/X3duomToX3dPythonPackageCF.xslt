@@ -600,6 +600,21 @@ class _X3DStatement:
         return result.strip().rstrip(',').rstrip(', ') + ')'
     def __str__(self):
         return self.__repl__().strip() # _X3DStatement
+    def nodeFieldXML(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result
 
 def isX3DStatement(value):
     """
@@ -2790,6 +2805,22 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     def __str__(self):
         return self.__repl__().strip() # </xsl:text>
                 <xsl:value-of select="@name"/>
+                <xsl:text>
+    def nodeFieldXML(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result</xsl:text>
             </xsl:when>
 <!-- __str__ not needed if __repl__ is satisfactory
     def __str__(self):
@@ -4150,16 +4181,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:text>
-            for field in self.callerargs: # output fields in order of caller
-                if hasattr(self, field): # ignore any non-field arguments
-                    fielddecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
-                    fieldtype = fielddecl[2]()
-                    fieldvalue = getattr(self, field)
-                    if fieldtype == 'SFNode':
-                        result += fieldvalue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
-                    if fieldtype == 'MFNode':
-                        for each in fieldvalue:
-                            result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)</xsl:text>
+            result += self.nodeFieldXML(self.callerargs, indentLevel=indentLevel, syntax=syntax)</xsl:text>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
                     		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
                     		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
