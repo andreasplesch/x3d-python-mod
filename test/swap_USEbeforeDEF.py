@@ -31,11 +31,11 @@ def swap_USEbeforeDEF(node=None, parent=None):
                 nodeClass = node.NAME()
                 node = globals()[nodeClass](USE=DEF) # a bit hackish
                 parent.children[insertDEFIndex] = node
-                # use node.FIELD_DEFINITIONS to reset all fields to defaults
+                # use node.FIELD_DEFINITIONS to reset all fields to defaults in case of deepcopy approach
         print(node.NAME(),'DEF: ' + DEF + str(len(DEFdict[DEF])))
         if DEF in USEbeforeDEFdict:
             USEnode = USEbeforeDEFdict[DEF][0] # replace first USE node only
-            USEcopy = copy.deepcopy(USEnode['node'])
+            #USEcopy = copy.deepcopy(USEnode['node'])
             if len(DEFdict[DEF]) == 1: # only for first DEF node
                 print("replacing earlier USE with this DEF")
                 insertUSEIndex = USEnode['parent'].children.index(USEnode['node'])
@@ -43,7 +43,7 @@ def swap_USEbeforeDEF(node=None, parent=None):
             # DEF to USE
             print("replacing DEF with copy of earlier USE")
             insertDEFIndex = parent.children.index(node)
-            parent.children[insertDEFIndex] = USEcopy
+            parent.children[insertDEFIndex] = USEnode['node'] # USEcopy
     for each in node.children:
         swap_USEbeforeDEF(node=each, parent=node)
 
