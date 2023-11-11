@@ -1,0 +1,1152 @@
+ant -f C:\\x3d-code\\www.web3d.org\\x3d\\tooltips all
+clean.backups:
+clean/delete backup files
+validate:
+25 file(s) have been successfully validated.
+build:
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-4.0.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips.html -warnings:recover tooltipLanguage=English version=4.0
+Processing X3D Tooltips 4.0 in English ...
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.3.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips3.3.html -warnings:recover tooltipLanguage=English version=3.3
+Processing X3D Tooltips 3.3 in English ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'PointProperties' attribute 'pointSizeScaleFactor' does not start with matching name in tooltip
+[Error] element 'ScreenFontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.2.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips3.2.html -warnings:recover tooltipLanguage=English version=3.2
+Processing X3D Tooltips 3.2 in English ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'ScreenFontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips3.1.html -warnings:recover tooltipLanguage=English version=3.1
+Processing X3D Tooltips 3.1 in English ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.0.profile.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltips3.0.html -warnings:recover tooltipLanguage=English version=3.0
+Processing X3D Tooltips 3.0 in English ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profileFrench.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsFrench.html -warnings:recover tooltipLanguage=French version=3.3
+Processing X3D Tooltips 3.3 in French ...
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'loop' does not start with matching name in tooltip
+[Error] element 'TimeSensor' attribute 'cycleTime' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profileGerman.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsGerman.html -warnings:recover tooltipLanguage=German version=3.3
+Processing X3D Tooltips 3.3 in German ...
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profileItalian.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsItalian.html -warnings:recover tooltipLanguage=Italian version=3.3
+Processing X3D Tooltips 3.3 in Italian ...
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLOD' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoOrigin' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoTouchSensor' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoViewpoint' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'ProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'ProtoInstance' attribute 'name' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.3.profileJapanese.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsJapanese.html -warnings:recover tooltipLanguage=Japanese version=3.3
+Processing X3D Tooltips 3.3 in Japanese ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoGridOrigin' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'ScreenFontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.2.profileKorean.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsKorean.html -warnings:recover tooltipLanguage=Korean version=3.2
+Processing X3D Tooltips 3.2 in Korean ...
+[Error] element 'BooleanSequencer' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'CollisionSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'CoordinateInterpolator' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'CoordinateInterpolator2D' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'url' does not start with matching name in tooltip
+[Error] element 'field' attribute 'accessType' does not start with matching name in tooltip
+[Error] element 'field' attribute 'type' does not start with matching name in tooltip
+[Error] element 'field' attribute 'value' does not start with matching name in tooltip
+[Error] element 'fieldValue' attribute 'value' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoGridOrigin' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLOD' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoOrigin' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoTouchSensor' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoViewpoint' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'IntegerSequencer' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'NormalInterpolator' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'OrientationInterpolator' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'PositionInterpolator' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'PositionInterpolator2D' attribute 'set_fraction' does not start with matching name in tooltip
+[Error] element 'ScalarInterpolator' attribute 'set_fraction' does not start with matching name in tooltip
+componentName not found for XvlShell node!
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profilePortuguese.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsPortuguese.html -warnings:recover tooltipLanguage=Portuguese version=3.3
+Processing X3D Tooltips 3.3 in Portuguese ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profileSpanish.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsSpanish.html -warnings:recover tooltipLanguage=Spanish version=3.3
+Processing X3D Tooltips 3.3 in Spanish ...
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Appearance' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'AudioClip' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Background' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Billboard' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'BooleanSequencer' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Box' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Collision' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Color' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ColorInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Cone' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Contour2D' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ContourPolyline2D' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Coordinate' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'CoordinateInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Cylinder' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'CylinderSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'DirectionalLight' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ElevationGrid' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Extrusion' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Fog' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'FogCoordinate' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoLOD' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLOD' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoMetadata' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoOrigin' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoOrigin' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoTouchSensor' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoTouchSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'GeoViewpoint' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoViewpoint' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Group' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'HAnimDisplacer' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'HAnimSegment' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ImageTexture' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'IndexedFaceSet' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'IndexedLineSet' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Inline' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'IntegerSequencer' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'KeySensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'LocalFog' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'LOD' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Material' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NavigationInfo' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Normal' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NormalInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsCurve' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsCurve2D' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsOrientationInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsPositionInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsSet' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsSweptSurface' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsSwungSurface' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'OrientationInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'PixelTexture' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'PlaneSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'PointLight' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'PointSet' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'PositionInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ProtoInstance' attribute 'name' does not start with matching name in tooltip
+[Error] element 'ProtoInstance' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ProximitySensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'ScalarInterpolator' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Script' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Shape' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Sound' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Sphere' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'SphereSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'SpotLight' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'StaticGroup' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'StringSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Switch' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Text' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'TextureCoordinate' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'TextureTransform' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'TimeSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'TouchSensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Viewpoint' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'VisibilitySensor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'WorldInfo' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+[Error] element 'Anchor' attribute 'class' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.3.profileThai.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsThai.html -warnings:recover tooltipLanguage=Thai version=3.3
+Processing X3D Tooltips 3.3 in Thai ...
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'ScreenFontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+$saxon.classpath=C:\x3d-code\www.web3d.org\x3d\tooltips\lib/saxon-he-12.1.jar;.C:\x3d-code\www.web3d.org\x3d\tooltips\lib/xmlresolver-4.4.3.jar;.
+saxonInvocationMacro invocation: -s:x3d-3.1.profileChinese.xml -xsl:X3dTooltipConversions.xslt -o:X3dTooltipsChinese.html -warnings:recover tooltipLanguage=Chinese version=3.3
+Processing X3D Tooltips 3.3 in Chinese ...
+[Error] element 'component' attribute 'name' does not start with matching name in tooltip
+[Error] element 'component' attribute 'level' does not start with matching name in tooltip
+[Error] element 'ContourPolyline2D' attribute 'point' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'name' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'url' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'appinfo' does not start with matching name in tooltip
+[Error] element 'ExternProtoDeclare' attribute 'documentation' does not start with matching name in tooltip
+[Error] element 'field' attribute 'appinfo' does not start with matching name in tooltip
+[Error] element 'field' attribute 'documentation' does not start with matching name in tooltip
+[Error] element 'FontStyle' attribute 'leftToRightll' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoCoordinate' attribute 'point' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'xDimension' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'zDimension' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'xSpacing' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'zSpacing' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'yScale' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'height' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'ccw' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'solid' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'creaseAngle' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'colorPerVertex' does not start with matching name in tooltip
+[Error] element 'GeoElevationGrid' attribute 'normalPerVertex' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoLocation' attribute 'geoCoords' does not start with matching name in tooltip
+[Error] element 'GeoLOD' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoOrigin' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoPositionInterpolator' attribute 'value_changed' does not start with matching name in tooltip
+[Error] element 'GeoTouchSensor' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'GeoViewpoint' attribute 'GeoSystem' does not start with matching name in tooltip
+[Error] element 'HAnimDisplacer' attribute 'name' does not start with matching name in tooltip
+[Error] element 'HAnimDisplacer' attribute 'coordIndex' does not start with matching name in tooltip
+[Error] element 'HAnimDisplacer' attribute 'displacements' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'name' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'info' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'translation' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'rotation' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'scale' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'scaleOrientation' does not start with matching name in tooltip
+[Error] element 'HAnimHumanoid' attribute 'center' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'name' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'ulimit' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'llimit' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'translation' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'rotation' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'scale' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'scaleOrientation' does not start with matching name in tooltip
+[Error] element 'HAnimJoint' attribute 'center' does not start with matching name in tooltip
+[Error] element 'HAnimSegment' attribute 'name' does not start with matching name in tooltip
+[Error] element 'HAnimSegment' attribute 'mass' does not start with matching name in tooltip
+[Error] element 'HAnimSegment' attribute 'centerOfMass' does not start with matching name in tooltip
+[Error] element 'HAnimSegment' attribute 'momentsOfInertia' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'name' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'translation' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'rotation' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'scale' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'scaleOrientation' does not start with matching name in tooltip
+[Error] element 'HAnimSite' attribute 'center' does not start with matching name in tooltip
+[Error] element 'IMPORT' attribute 'AS' does not start with matching name in tooltip
+[Error] element 'LoadSensor' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'MovieTexture' attribute 'isActive' does not start with matching name in tooltip
+[Error] element 'NurbsCurve' attribute 'knot' does not start with matching name in tooltip
+[Error] element 'NurbsCurve' attribute 'order' does not start with matching name in tooltip
+[Error] element 'NurbsCurve' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsCurve' attribute 'tessellation' does not start with matching name in tooltip
+[Error] element 'NurbsCurve2D' attribute 'knot' does not start with matching name in tooltip
+[Error] element 'NurbsCurve2D' attribute 'order' does not start with matching name in tooltip
+[Error] element 'NurbsCurve2D' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsCurve2D' attribute 'tessellation' does not start with matching name in tooltip
+[Error] element 'NurbsOrientationInterpolator' attribute 'knot' does not start with matching name in tooltip
+[Error] element 'NurbsOrientationInterpolator' attribute 'order' does not start with matching name in tooltip
+[Error] element 'NurbsOrientationInterpolator' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'uDimension' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'vDimension' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'uKnot' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'vKnot' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'uOrder' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'vOrder' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'uTessellation' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'vTessellation' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsPatchSurface' attribute 'solid' does not start with matching name in tooltip
+[Error] element 'NurbsPositionInterpolator' attribute 'knot' does not start with matching name in tooltip
+[Error] element 'NurbsPositionInterpolator' attribute 'order' does not start with matching name in tooltip
+[Error] element 'NurbsPositionInterpolator' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsSet' attribute 'tessellationScale' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'uDimension' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'vDimension' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'uKnot' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'vKnot' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'uOrder' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'vOrder' does not start with matching name in tooltip
+[Error] element 'NurbsSurfaceInterpolator' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsSweptSurface' attribute 'ccw' does not start with matching name in tooltip
+[Error] element 'NurbsSweptSurface' attribute 'solid' does not start with matching name in tooltip
+[Error] element 'NurbsSwungSurface' attribute 'ccw' does not start with matching name in tooltip
+[Error] element 'NurbsSwungSurface' attribute 'solid' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'uDimension' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'vDimension' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'uKnot' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'vKnot' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'uOrder' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'vOrder' does not start with matching name in tooltip
+[Error] element 'NurbsTextureCoordinate' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'uDimension' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'vDimension' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'uKnot' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'vKnot' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'uOrder' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'vOrder' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'uTessellation' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'vTessellation' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'weight' does not start with matching name in tooltip
+[Error] element 'NurbsTrimmedSurface' attribute 'solid' does not start with matching name in tooltip
+[Error] element 'ProtoDeclare' attribute 'appinfo' does not start with matching name in tooltip
+[Error] element 'ProtoDeclare' attribute 'documentation' does not start with matching name in tooltip
+... X3D Tooltip help-page generation complete.
+Replaced 1 occurrences in 1 files.
+Replaced 1 occurrences in 1 files.
+copy:
+Copying 14 files to C:\x3d-code\www.web3d.org\x3d\content
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltips.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips3.0.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltips3.0.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips3.1.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltips3.1.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips3.2.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltips3.2.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips3.3.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltips3.3.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsChinese.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsChinese.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsFrench.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsFrench.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsGerman.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsGerman.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsItalian.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsItalian.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsJapanese.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsJapanese.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsKorean.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsKorean.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsPortuguese.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsPortuguese.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsSpanish.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsSpanish.html
+Copying C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltipsThai.html to C:\x3d-code\www.web3d.org\x3d\content\X3dTooltipsThai.html
+zip:
+Building zip: C:\x3d-code\www.web3d.org\x3d\tooltips\X3dTooltips.zip
+scp.askUsernamePassword.web3d:
+hostname.web3d, username.web3d, password.web3d obtained from file ../content/examples/access.properties
+scp.uploadTooltips.web3d:
+scp (sftp) upload stylesheets to brutzman@www.web3d.org:/home/spi3der/public/web3d.org_x3d/tooltips
+Connecting to www.web3d.org:22
+Connecting to www.web3d.org port 22
+Connection established
+Remote version string: SSH-2.0-OpenSSH_7.4
+Local version string: SSH-2.0-JSCH-0.1.54
+CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+CheckKexes: diffie-hellman-group14-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+CheckSignatures: ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+SSH_MSG_KEXINIT sent
+SSH_MSG_KEXINIT received
+kex: server: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+kex: server: ssh-rsa,rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: none,zlib@openssh.com
+kex: server: none,zlib@openssh.com
+kex: server: 
+kex: server: 
+kex: client: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
+kex: client: ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: none
+kex: client: none
+kex: client: 
+kex: client: 
+kex: server->client aes128-ctr hmac-sha1 none
+kex: client->server aes128-ctr hmac-sha1 none
+SSH_MSG_KEX_ECDH_INIT sent
+expecting SSH_MSG_KEX_ECDH_REPLY
+ssh_rsa_verify: signature true
+Permanently added 'www.web3d.org' (RSA) to the list of known hosts.
+SSH_MSG_NEWKEYS sent
+SSH_MSG_NEWKEYS received
+SSH_MSG_SERVICE_REQUEST sent
+SSH_MSG_SERVICE_ACCEPT received
+Authentications that can continue: publickey,keyboard-interactive,password
+Next authentication method: publickey
+Authentications that can continue: password
+Next authentication method: password
+Authentication succeeded (password).
+Sending: README.txt : 2597
+File transfer time: 0.1 Average Rate: 26,232.32 B/s
+Sending: X3dTooltipConversions.xslt : 338343
+*** 100%
+File transfer time: 0.54 Average Rate: 631,236.94 B/s
+Sending: X3dTooltips.html : 7278330
+................................... 50%
+................................... 100%
+File transfer time: 2.16 Average Rate: 3,374,283.73 B/s
+Sending: X3dTooltips3.0.html : 2747480
+.......................... 100%
+File transfer time: 0.83 Average Rate: 3,302,259.62 B/s
+Sending: X3dTooltips3.1.html : 3164154
+.............................. 100%
+File transfer time: 1.07 Average Rate: 2,954,392.16 B/s
+Sending: X3dTooltips3.2.html : 4416549
+........................................... 100%
+File transfer time: 1.44 Average Rate: 3,067,047.92 B/s
+Sending: X3dTooltips3.3.html : 5030911
+........................ 50%
+........................ 100%
+File transfer time: 1.5 Average Rate: 3,365,157.86 B/s
+Sending: X3dTooltips4.0.html : 561
+File transfer time: 0.1 Average Rate: 5,783.51 B/s
+Sending: X3dTooltipsChinese.html : 2510124
+........................ 100%
+File transfer time: 0.78 Average Rate: 3,234,695.88 B/s
+Sending: X3dTooltipsFrench.html : 2693560
+.......................... 100%
+File transfer time: 0.77 Average Rate: 3,484,553.69 B/s
+Sending: X3dTooltipsGerman.html : 2723824
+.......................... 100%
+File transfer time: 0.9 Average Rate: 3,026,471.11 B/s
+Sending: X3dTooltipsItalian.html : 2636359
+............ 50%
+............ 100%
+File transfer time: 0.85 Average Rate: 3,097,954.17 B/s
+Sending: X3dTooltipsJapanese.html : 4186345
+........................................ 100%
+File transfer time: 1.12 Average Rate: 3,734,473.68 B/s
+Sending: X3dTooltipsKorean.html : 2779341
+........................... 100%
+File transfer time: 0.87 Average Rate: 3,209,400.69 B/s
+Sending: X3dTooltipsPortuguese.html : 2655046
+............ 50%
+............ 100%
+File transfer time: 0.86 Average Rate: 3,069,417.34 B/s
+Sending: X3dTooltipsSpanish.html : 2667275
+.......................... 100%
+File transfer time: 0.75 Average Rate: 3,570,649.26 B/s
+Sending: X3dTooltipsThai.html : 4447608
+..................... 50%
+..................... 100%
+File transfer time: 1.45 Average Rate: 3,071,552.49 B/s
+Sending: build.xml : 25285
+File transfer time: 0.12 Average Rate: 216,111.11 B/s
+Sending: x3d-3.0.profile.xml : 879904
+ 100%
+File transfer time: 0.34 Average Rate: 2,587,952.94 B/s
+Sending: x3d-3.0.profileChinese.xml : 583556
+* 100%
+File transfer time: 0.27 Average Rate: 2,153,343.17 B/s
+Sending: x3d-3.0.profileCroatian.xml : 797639
+ 100%
+File transfer time: 0.33 Average Rate: 2,431,826.22 B/s
+Sending: x3d-3.0.profileFrench.xml : 696111
+ 100%
+File transfer time: 0.3 Average Rate: 2,343,808.08 B/s
+Sending: x3d-3.0.profileGerman.xml : 721005
+ 100%
+File transfer time: 0.28 Average Rate: 2,538,750.0 B/s
+Sending: x3d-3.0.profileItalian.xml : 646688
+ 100%
+File transfer time: 0.28 Average Rate: 2,293,219.86 B/s
+Sending: x3d-3.0.profilePortuguese.xml : 667547
+* 100%
+File transfer time: 0.29 Average Rate: 2,270,568.03 B/s
+Sending: x3d-3.0.profileRussian.xml : 794937
+* 100%
+File transfer time: 0.34 Average Rate: 2,324,377.19 B/s
+Sending: x3d-3.0.profileSpanish.xml : 694755
+ 100%
+File transfer time: 0.3 Average Rate: 2,308,156.15 B/s
+Sending: x3d-3.1.profile.xml : 1012784
+********* 100%
+File transfer time: 0.4 Average Rate: 2,544,683.42 B/s
+Sending: x3d-3.1.profileChinese.xml : 712497
+ 100%
+File transfer time: 0.57 Average Rate: 1,254,396.13 B/s
+Sending: x3d-3.1.profileCroatian.xml : 554195
+ 100%
+File transfer time: 0.26 Average Rate: 2,107,205.32 B/s
+Sending: x3d-3.1.profileFrench.xml : 822864
+ 100%
+File transfer time: 0.33 Average Rate: 2,471,063.06 B/s
+Sending: x3d-3.1.profileGerman.xml : 850755
+* 100%
+File transfer time: 0.39 Average Rate: 2,192,667.53 B/s
+Sending: x3d-3.1.profileGreek.xml : 918469
+ 100%
+File transfer time: 0.35 Average Rate: 2,631,716.33 B/s
+Sending: x3d-3.1.profileItalian.xml : 775476
+ 100%
+File transfer time: 0.29 Average Rate: 2,628,732.2 B/s
+Sending: x3d-3.1.profilePortuguese.xml : 798494
+ 100%
+File transfer time: 0.31 Average Rate: 2,575,787.1 B/s
+Sending: x3d-3.1.profileRussian.xml : 925577
+ 100%
+File transfer time: 0.38 Average Rate: 2,461,640.96 B/s
+Sending: x3d-3.1.profileSpanish.xml : 822876
+ 100%
+File transfer time: 0.34 Average Rate: 2,441,768.55 B/s
+Sending: x3d-3.2.profile.xml : 1415539
+...... 50%
+...... 100%
+File transfer time: 0.49 Average Rate: 2,859,674.75 B/s
+Sending: x3d-3.2.profileKorean.xml : 794931
+* 100%
+File transfer time: 0.33 Average Rate: 2,423,570.12 B/s
+Sending: x3d-3.3.profile.xml : 1598816
+............... 100%
+File transfer time: 0.5 Average Rate: 3,178,560.64 B/s
+Sending: x3d-3.3.profileJapanese.xml : 1288594
+............ 100%
+File transfer time: 0.67 Average Rate: 1,923,274.63 B/s
+Sending: x3d-3.3.profileThai.xml : 1523498
+.............. 100%
+File transfer time: 0.68 Average Rate: 2,250,366.32 B/s
+Sending: x3d-4.0.profile.xml : 1928731
+.................. 100%
+File transfer time: 0.81 Average Rate: 2,372,362.85 B/s
+done.
+Disconnecting from www.web3d.org port 22
+Caught an exception, leaving main loop due to Socket closed
+Connecting to www.web3d.org:22
+Connecting to www.web3d.org port 22
+Connection established
+Remote version string: SSH-2.0-OpenSSH_7.4
+Local version string: SSH-2.0-JSCH-0.1.54
+CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+CheckKexes: diffie-hellman-group14-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+CheckSignatures: ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+SSH_MSG_KEXINIT sent
+SSH_MSG_KEXINIT received
+kex: server: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+kex: server: ssh-rsa,rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: none,zlib@openssh.com
+kex: server: none,zlib@openssh.com
+kex: server: 
+kex: server: 
+kex: client: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
+kex: client: ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: none
+kex: client: none
+kex: client: 
+kex: client: 
+kex: server->client aes128-ctr hmac-sha1 none
+kex: client->server aes128-ctr hmac-sha1 none
+SSH_MSG_KEX_ECDH_INIT sent
+expecting SSH_MSG_KEX_ECDH_REPLY
+ssh_rsa_verify: signature true
+Permanently added 'www.web3d.org' (RSA) to the list of known hosts.
+SSH_MSG_NEWKEYS sent
+SSH_MSG_NEWKEYS received
+SSH_MSG_SERVICE_REQUEST sent
+SSH_MSG_SERVICE_ACCEPT received
+Authentications that can continue: publickey,keyboard-interactive,password
+Next authentication method: publickey
+Authentications that can continue: password
+Next authentication method: password
+Authentication succeeded (password).
+Sending: Anchor.gif : 151
+File transfer time: 0.1 Average Rate: 1,525.25 B/s
+Sending: Appearance.gif : 905
+File transfer time: 0.1 Average Rate: 9,329.9 B/s
+Sending: Arc2D.gif : 522
+File transfer time: 0.1 Average Rate: 5,381.44 B/s
+Sending: ArcClose2D.gif : 594
+File transfer time: 0.1 Average Rate: 6,123.71 B/s
+Sending: AudioClip.gif : 113
+File transfer time: 0.1 Average Rate: 1,141.41 B/s
+Sending: Background.gif : 941
+File transfer time: 0.1 Average Rate: 9,316.83 B/s
+Sending: Billboard.gif : 873
+File transfer time: 0.1 Average Rate: 8,818.18 B/s
+Sending: BooleanSequencer.gif : 900
+File transfer time: 0.1 Average Rate: 9,278.35 B/s
+Sending: Box.gif : 161
+File transfer time: 0.1 Average Rate: 1,659.79 B/s
+Sending: Children.gif : 875
+File transfer time: 0.11 Average Rate: 8,254.72 B/s
+Sending: Circle2D.gif : 592
+File transfer time: 0.14 Average Rate: 4,198.58 B/s
+Sending: Collision.gif : 140
+File transfer time: 0.13 Average Rate: 1,093.75 B/s
+Sending: CollisionPdu.gif : 891
+File transfer time: 0.17 Average Rate: 5,367.47 B/s
+Sending: Color.gif : 137
+File transfer time: 0.1 Average Rate: 1,343.14 B/s
+Sending: ColorInterpolator.gif : 902
+File transfer time: 0.1 Average Rate: 8,843.14 B/s
+Sending: Cone.gif : 944
+File transfer time: 0.11 Average Rate: 8,905.66 B/s
+Sending: Coordinate.gif : 146
+File transfer time: 0.1 Average Rate: 1,431.37 B/s
+Sending: CoordinateInterpolator.gif : 151
+File transfer time: 0.1 Average Rate: 1,556.7 B/s
+Sending: CoordinateInterpolator2D.gif : 910
+File transfer time: 0.1 Average Rate: 9,191.92 B/s
+Sending: Cylinder.gif : 983
+File transfer time: 0.1 Average Rate: 10,134.02 B/s
+Sending: CylinderSensor.gif : 934
+File transfer time: 0.1 Average Rate: 9,434.34 B/s
+Sending: DISENTITYMANAGER16.png : 155
+File transfer time: 0.1 Average Rate: 1,614.58 B/s
+Sending: DISENTITYTYPEMAPPING16.png : 155
+File transfer time: 0.12 Average Rate: 1,347.83 B/s
+Sending: DetonatePdu.gif : 1015
+File transfer time: 0.12 Average Rate: 8,750.0 B/s
+Sending: DirectionalLight.gif : 136
+File transfer time: 0.1 Average Rate: 1,360.0 B/s
+Sending: Disk2D.gif : 614
+File transfer time: 0.12 Average Rate: 5,116.67 B/s
+Sending: ElevationGrid.gif : 189
+File transfer time: 0.1 Average Rate: 1,890.0 B/s
+Sending: EspduTransform.gif : 999
+File transfer time: 0.1 Average Rate: 9,990.0 B/s
+Sending: ExternProtoDeclare.gif : 128
+File transfer time: 0.09 Average Rate: 1,488.37 B/s
+Sending: Extrusion.gif : 190
+File transfer time: 0.1 Average Rate: 1,826.92 B/s
+Sending: Fog.gif : 1262
+File transfer time: 0.11 Average Rate: 11,168.14 B/s
+Sending: FontStyle.gif : 133
+File transfer time: 0.09 Average Rate: 1,414.89 B/s
+Sending: GeoCoordinate.gif : 164
+File transfer time: 0.1 Average Rate: 1,690.72 B/s
+Sending: GeoElevationGrid.gif : 189
+File transfer time: 0.1 Average Rate: 1,871.29 B/s
+Sending: GeoLOD.gif : 897
+File transfer time: 0.1 Average Rate: 9,153.06 B/s
+Sending: GeoLocation.gif : 122
+File transfer time: 0.1 Average Rate: 1,232.32 B/s
+Sending: GeoMetadata.gif : 1080
+File transfer time: 0.12 Average Rate: 9,230.77 B/s
+Sending: GeoOrigin.gif : 146
+File transfer time: 0.11 Average Rate: 1,351.85 B/s
+Sending: GeoPositionInterpolator.gif : 139
+File transfer time: 0.17 Average Rate: 817.65 B/s
+Sending: GeoTouchSensor.gif : 137
+File transfer time: 0.21 Average Rate: 652.38 B/s
+Sending: GeoViewpoint.gif : 138
+File transfer time: 0.11 Average Rate: 1,232.14 B/s
+Sending: Group.gif : 896
+File transfer time: 0.09 Average Rate: 9,531.91 B/s
+Sending: HAnimDisplacer.gif : 132
+File transfer time: 0.11 Average Rate: 1,211.01 B/s
+Sending: HAnimHumanoid.gif : 125
+File transfer time: 0.1 Average Rate: 1,262.63 B/s
+Sending: HAnimJoint.gif : 120
+File transfer time: 0.1 Average Rate: 1,263.16 B/s
+Sending: HAnimSegment.gif : 122
+File transfer time: 0.1 Average Rate: 1,184.47 B/s
+Sending: HAnimSite.gif : 111
+File transfer time: 0.1 Average Rate: 1,144.33 B/s
+Sending: IS.gif : 118
+File transfer time: 0.1 Average Rate: 1,145.63 B/s
+Sending: IS2.gif : 866
+File transfer time: 0.11 Average Rate: 7,596.49 B/s
+Sending: IconSheet-1.pdf : 53749
+File transfer time: 0.22 Average Rate: 243,208.14 B/s
+Sending: IconSheet-1.wpg : 111104
+ 100%
+File transfer time: 0.21 Average Rate: 534,153.85 B/s
+Sending: IconSheet-2.pdf : 17810
+File transfer time: 0.11 Average Rate: 163,394.5 B/s
+Sending: IconSheet-2.wpg : 69632
+File transfer time: 0.11 Average Rate: 616,212.39 B/s
+Sending: IconSheet-3.pdf : 24769
+File transfer time: 0.11 Average Rate: 225,172.73 B/s
+Sending: IconSheet-3.wpg : 67072
+File transfer time: 0.12 Average Rate: 563,630.25 B/s
+Sending: IconSheet-4.pdf : 18859
+File transfer time: 0.11 Average Rate: 168,383.93 B/s
+Sending: IconSheet-4.wpg : 18907
+File transfer time: 0.1 Average Rate: 194,917.53 B/s
+Sending: ImageTexture.gif : 149
+File transfer time: 0.09 Average Rate: 1,602.15 B/s
+Sending: IndexedFaceSet.gif : 151
+File transfer time: 0.1 Average Rate: 1,556.7 B/s
+Sending: IndexedLineSet.gif : 129
+File transfer time: 0.1 Average Rate: 1,252.43 B/s
+Sending: IntegerSequencer.gif : 920
+File transfer time: 0.1 Average Rate: 9,292.93 B/s
+Sending: KeySensor.gif : 158
+File transfer time: 0.1 Average Rate: 1,580.0 B/s
+Sending: LOD.gif : 892
+File transfer time: 0.1 Average Rate: 8,660.19 B/s
+Sending: LoadSensor.gif : 906
+File transfer time: 0.15 Average Rate: 6,163.27 B/s
+Sending: Material.gif : 928
+File transfer time: 0.14 Average Rate: 6,628.57 B/s
+Sending: MovieTexture.gif : 896
+File transfer time: 0.1 Average Rate: 8,960.0 B/s
+Sending: NavigationInfo.gif : 139
+File transfer time: 0.25 Average Rate: 556.0 B/s
+Sending: Normal.gif : 137
+File transfer time: 0.1 Average Rate: 1,397.96 B/s
+Sending: NormalInterpolator.gif : 156
+File transfer time: 0.1 Average Rate: 1,544.55 B/s
+Sending: NurbsCurve.gif : 876
+File transfer time: 0.1 Average Rate: 8,848.48 B/s
+Sending: NurbsSurface.gif : 876
+File transfer time: 0.1 Average Rate: 9,030.93 B/s
+Sending: OrientationInterpolator.gif : 137
+File transfer time: 0.1 Average Rate: 1,383.84 B/s
+Sending: PixelTexture.gif : 144
+File transfer time: 0.12 Average Rate: 1,200.0 B/s
+Sending: PlaneSensor.gif : 935
+File transfer time: 0.09 Average Rate: 11,000.0 B/s
+Sending: PointLight.gif : 157
+File transfer time: 0.12 Average Rate: 1,365.22 B/s
+Sending: PointSet.gif : 140
+File transfer time: 0.11 Average Rate: 1,308.41 B/s
+Sending: Polyline2D.gif : 582
+File transfer time: 0.1 Average Rate: 5,762.38 B/s
+Sending: PositionInterpolator.gif : 137
+File transfer time: 0.1 Average Rate: 1,356.44 B/s
+Sending: PositionInterpolator2D.gif : 891
+File transfer time: 0.12 Average Rate: 7,681.03 B/s
+Sending: ProtoDeclare.gif : 115
+File transfer time: 0.1 Average Rate: 1,127.45 B/s
+Sending: ProtoInstance.gif : 147
+File transfer time: 0.1 Average Rate: 1,500.0 B/s
+Sending: ProximitySensor.gif : 904
+File transfer time: 0.1 Average Rate: 9,131.31 B/s
+Sending: ROUTE.gif : 126
+File transfer time: 0.1 Average Rate: 1,247.52 B/s
+Sending: ReceiverPdu.gif : 996
+File transfer time: 0.1 Average Rate: 9,764.71 B/s
+Sending: Rectangle2D.gif : 1071
+File transfer time: 0.1 Average Rate: 10,818.18 B/s
+Sending: SHAPE16.png : 672
+File transfer time: 0.1 Average Rate: 6,653.47 B/s
+Sending: SHAPE32.png : 1707
+File transfer time: 0.1 Average Rate: 17,418.37 B/s
+Sending: ScalarInterpolator.gif : 135
+File transfer time: 0.09 Average Rate: 1,569.77 B/s
+Sending: Scene.gif : 898
+File transfer time: 0.1 Average Rate: 8,980.0 B/s
+Sending: Script.gif : 147
+File transfer time: 0.1 Average Rate: 1,427.18 B/s
+Sending: Script2.gif : 135
+File transfer time: 0.1 Average Rate: 1,285.71 B/s
+Sending: Shape.gif : 142
+File transfer time: 0.1 Average Rate: 1,378.64 B/s
+Sending: SignalPdu.gif : 959
+File transfer time: 0.17 Average Rate: 5,575.58 B/s
+Sending: Sound.gif : 158
+File transfer time: 0.12 Average Rate: 1,373.91 B/s
+Sending: Sphere.gif : 1030
+File transfer time: 0.11 Average Rate: 9,449.54 B/s
+Sending: SphereSensor.gif : 932
+File transfer time: 0.11 Average Rate: 8,710.28 B/s
+Sending: SpotLight.gif : 137
+File transfer time: 0.1 Average Rate: 1,383.84 B/s
+Sending: StringSensor.gif : 151
+File transfer time: 0.1 Average Rate: 1,556.7 B/s
+Sending: Switch.gif : 888
+File transfer time: 0.1 Average Rate: 9,347.37 B/s
+Sending: Text.gif : 131
+File transfer time: 0.1 Average Rate: 1,350.52 B/s
+Sending: TextureCoordinate.gif : 134
+File transfer time: 0.1 Average Rate: 1,300.97 B/s
+Sending: TextureTransform.gif : 155
+File transfer time: 0.1 Average Rate: 1,490.38 B/s
+Sending: TimeSensor.gif : 153
+File transfer time: 0.1 Average Rate: 1,577.32 B/s
+Sending: TouchSensor.gif : 136
+File transfer time: 0.1 Average Rate: 1,346.53 B/s
+Sending: Transform.gif : 137
+File transfer time: 0.1 Average Rate: 1,397.96 B/s
+Sending: TransmitterPdu.gif : 1001
+File transfer time: 0.1 Average Rate: 10,319.59 B/s
+Sending: Triangle.gif : 1060
+File transfer time: 0.1 Average Rate: 10,707.07 B/s
+Sending: TriangleSet2D.gif : 606
+File transfer time: 0.1 Average Rate: 6,060.0 B/s
+Sending: UNIT16.png : 205
+File transfer time: 0.1 Average Rate: 2,070.71 B/s
+Sending: USE.gif : 150
+File transfer time: 0.1 Average Rate: 1,530.61 B/s
+Sending: Viewpoint.gif : 138
+File transfer time: 0.1 Average Rate: 1,352.94 B/s
+Sending: Viewpoint0.gif : 137
+File transfer time: 0.1 Average Rate: 1,330.1 B/s
+Sending: VisibilitySensor.gif : 146
+File transfer time: 0.1 Average Rate: 1,431.37 B/s
+Sending: WorldInfo.gif : 1111
+File transfer time: 0.12 Average Rate: 9,577.59 B/s
+Sending: X3D-Edit-3.0.ico : 2238
+File transfer time: 0.1 Average Rate: 22,380.0 B/s
+Sending: X3D-Edit-Chinese.ico : 2238
+File transfer time: 0.1 Average Rate: 21,941.18 B/s
+Sending: X3D-Edit-English.ico : 2238
+File transfer time: 0.1 Average Rate: 21,728.16 B/s
+Sending: X3D-Edit-French.ico : 2238
+File transfer time: 0.11 Average Rate: 20,345.45 B/s
+Sending: X3D-Edit-German.ico : 2238
+File transfer time: 0.09 Average Rate: 25,724.14 B/s
+Sending: X3D-Edit-Italian.ico : 2238
+File transfer time: 0.1 Average Rate: 22,158.42 B/s
+Sending: X3D-Edit-Portuguese.ico : 2238
+File transfer time: 0.11 Average Rate: 19,631.58 B/s
+Sending: X3D-Edit-Russian.ico : 2238
+File transfer time: 0.16 Average Rate: 14,346.15 B/s
+Sending: X3D-Edit-Spanish.ico : 2238
+File transfer time: 0.11 Average Rate: 19,805.31 B/s
+Sending: X3D.gif : 1014
+File transfer time: 0.11 Average Rate: 9,388.89 B/s
+Sending: X3D.ico : 2238
+File transfer time: 0.11 Average Rate: 20,722.22 B/s
+Sending: X3DtextIcon.tif : 47424
+File transfer time: 0.11 Average Rate: 423,428.57 B/s
+Sending: X3DtextIcon16-0.png : 586
+File transfer time: 0.12 Average Rate: 5,095.65 B/s
+Sending: X3DtextIcon16.png : 585
+File transfer time: 0.1 Average Rate: 5,625.0 B/s
+Sending: XvlShell.gif : 1137
+File transfer time: 0.1 Average Rate: 11,370.0 B/s
+Sending: anchor6.gif : 493
+File transfer time: 0.1 Average Rate: 4,930.0 B/s
+Sending: anchor7.gif : 263
+File transfer time: 0.09 Average Rate: 2,955.06 B/s
+Sending: anchor8.gif : 145
+File transfer time: 0.12 Average Rate: 1,260.87 B/s
+Sending: component.gif : 883
+File transfer time: 0.1 Average Rate: 8,919.19 B/s
+Sending: cube.gif : 175
+File transfer time: 0.11 Average Rate: 1,620.37 B/s
+Sending: field.gif : 111
+File transfer time: 0.1 Average Rate: 1,144.33 B/s
+Sending: fieldValue.gif : 856
+File transfer time: 0.1 Average Rate: 8,734.69 B/s
+Sending: head.gif : 873
+File transfer time: 0.12 Average Rate: 7,525.86 B/s
+Sending: meta.gif : 865
+File transfer time: 0.11 Average Rate: 7,935.78 B/s
+Sending: proxy.gif : 138
+File transfer time: 0.11 Average Rate: 1,301.89 B/s
+Sending: xj3d.ico : 3262
+File transfer time: 0.1 Average Rate: 32,620.0 B/s
+done.
+Disconnecting from www.web3d.org port 22
+Caught an exception, leaving main loop due to Socket closed
+Connecting to www.web3d.org:22
+Connecting to www.web3d.org port 22
+Connection established
+Remote version string: SSH-2.0-OpenSSH_7.4
+Local version string: SSH-2.0-JSCH-0.1.54
+CheckCiphers: aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-ctr,arcfour,arcfour128,arcfour256
+CheckKexes: diffie-hellman-group14-sha1,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+CheckSignatures: ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+SSH_MSG_KEXINIT sent
+SSH_MSG_KEXINIT received
+kex: server: curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+kex: server: ssh-rsa,rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc,blowfish-cbc,cast128-cbc,3des-cbc
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+kex: server: none,zlib@openssh.com
+kex: server: none,zlib@openssh.com
+kex: server: 
+kex: server: 
+kex: client: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
+kex: client: ssh-rsa,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: aes128-ctr,aes128-cbc,3des-ctr,3des-cbc,blowfish-cbc,aes192-ctr,aes192-cbc,aes256-ctr,aes256-cbc
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: hmac-md5,hmac-sha1,hmac-sha2-256,hmac-sha1-96,hmac-md5-96
+kex: client: none
+kex: client: none
+kex: client: 
+kex: client: 
+kex: server->client aes128-ctr hmac-sha1 none
+kex: client->server aes128-ctr hmac-sha1 none
+SSH_MSG_KEX_ECDH_INIT sent
+expecting SSH_MSG_KEX_ECDH_REPLY
+ssh_rsa_verify: signature true
+Permanently added 'www.web3d.org' (RSA) to the list of known hosts.
+SSH_MSG_NEWKEYS sent
+SSH_MSG_NEWKEYS received
+SSH_MSG_SERVICE_REQUEST sent
+SSH_MSG_SERVICE_ACCEPT received
+Authentications that can continue: publickey,keyboard-interactive,password
+Next authentication method: publickey
+Authentications that can continue: password
+Next authentication method: password
+Authentication succeeded (password).
+Sending: X3dTooltips.zip : 6609030
+................................................................ 100%
+File transfer time: 2.42 Average Rate: 2,732,133.11 B/s
+done.
+Disconnecting from www.web3d.org port 22
+Caught an exception, leaving main loop due to Socket closed
+results online at https://www.web3d.org/x3d/tooltips/X3dTooltips.html
+scp.uploadTooltips.web3d ssh-sftp task complete
+all:
+BUILD SUCCESSFUL (total time: 2 minutes 21 seconds)
