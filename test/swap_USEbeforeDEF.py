@@ -60,8 +60,10 @@ grpb.children.append(trans)
 grpa.children.append(trans2)
 grpb.children.append(trans)
 print (x3d.XML())
+print (x3d.VRML())
 swap_USEbeforeDEF(node=scene)
 print (x3d.XML())
+print (x3d.VRML())
 
 USEdict = {}
 DEFdict = {}
@@ -81,9 +83,10 @@ grpb.children.append(trans)
 grpa.children.append(trans)
 
 print (x3d.XML())
+print (x3d.VRML())
 swap_USEbeforeDEF(node=scene)
 print (x3d.XML())
-
+print (x3d.VRML())
 
 #blob = x3d.XML()
 #fp = open("dump_case2.x3d","w+")
