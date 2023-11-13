@@ -4774,7 +4774,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <!-- output child SFNode/MFNode fields as child XML elements -->
                 <xsl:if test="$allFields[contains(@type,'Node')]">
                     <xsl:text>
-        result += '\n' + indent + '  ' + self.VRMLforNodeFields(self.callerargs, indentLevel=indentLevel, VRML97=VRML97)</xsl:text>
+        result += self.VRMLforNodeFields(self.callerargs, indentLevel=indentLevel, VRML97=VRML97)</xsl:text>
                 </xsl:if>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
                             <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
