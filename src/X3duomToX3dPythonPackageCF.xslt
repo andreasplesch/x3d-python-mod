@@ -633,6 +633,39 @@ class _X3DStatement:
         return result.strip().rstrip(',').rstrip(', ') + ')'
     def __str__(self):
         return self.__repl__().strip() # _X3DStatement
+    def XMLforNodeFields(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result
+    def VRMLforNodeFields(self, fields={}, indentLevel=0, syntax='VRML', VRML97=False):
+        result = ''
+        indent = '  ' * indentLevel
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += '\n' + '  ' + indent + field + + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                if fieldType == FieldType.MFNode:
+                    result += '\n' + indent + '  ' + field + ' [' + '\n' + indent + '  ' + '  '
+                    for each in fieldValue:
+                        result += each.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                    result += '\n' + indent + '  ' + ']' + '\n' + indent
+        return result
 
 def isX3DStatement(value):
     """
@@ -2823,6 +2856,40 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     def __str__(self):
         return self.__repl__().strip() # </xsl:text>
                 <xsl:value-of select="@name"/>
+                <xsl:text>
+    def XMLforNodeFields(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result
+    def VRMLforNodeFields(self, fields={}, indentLevel=0, syntax='VRML', VRML97=False):
+        result = ''
+        indent = '  ' * indentLevel
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += '\n' + '  ' + indent + field + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                if fieldType == FieldType.MFNode:
+                    result += '\n' + indent + '  ' + field + ' [' + '\n' + indent + '  ' + '  '
+                    for each in fieldValue:
+                        result += each.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                    result += '\n' + indent + '  ' + ']' + '\n' + indent
+        return result</xsl:text>
             </xsl:when>
 <!-- __str__ not needed if __repl__ is satisfactory
     def __str__(self):
@@ -4190,14 +4257,15 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                         result += each.XML(indentLevel=indentLevel+1, syntax=syntax)</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
+                        <xsl:text>
+            result += self.XMLforNodeFields(fields=self.callerargs, indentLevel=indentLevel, syntax=syntax)</xsl:text>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
-            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
+                            <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                            <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
 			    <!--<xsl:sort select="@name" order="ascending"/>-->
-
                             <xsl:variable name="fieldName">
                                 <xsl:call-template name="fieldName">
                                     <xsl:with-param name="name" select="@name"/>
@@ -4740,9 +4808,13 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     </xsl:if>
                 </xsl:for-each>
                 <!-- output child SFNode/MFNode fields as child XML elements -->
+                <xsl:if test="$allFields[contains(@type,'Node')]">
+                    <xsl:text>
+        result += self.VRMLforNodeFields(self.callerargs, indentLevel=indentLevel, VRML97=VRML97)</xsl:text>
+                </xsl:if>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
-            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
+                            <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                            <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
@@ -4775,7 +4847,9 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                         <xsl:text>
         if self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
-                        <xsl:text>: # output this SFNode
+                        <xsl:text> and '</xsl:text>
+                        <xsl:value-of select="$fieldName"/>
+                        <xsl:text>' not in self.callerargs: # output this SFNode
             result += '\n' + '  ' + indent + '</xsl:text><!-- one further indent -->
                         <xsl:value-of select="$fieldName"/>
                         <xsl:text> ' + self.</xsl:text>
@@ -4787,7 +4861,9 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                         <xsl:text>
         if self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
-                        <xsl:text>: # walk each child in list, if any (avoid empty list recursion)
+                        <xsl:text> and '</xsl:text>
+                        <xsl:value-of select="$fieldName"/>
+                        <xsl:text>' not in self.callerargs: # output this MFNode, walk each child in list, if any (avoid empty list recursion)
             result += '\n' + indent + '  ' + '</xsl:text><xsl:value-of select="$fieldName"/><xsl:text> [' + '\n' + indent + '  ' + '  '
             for each in self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
