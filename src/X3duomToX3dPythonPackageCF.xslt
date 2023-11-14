@@ -626,7 +626,7 @@ class _X3DStatement:
                 fieldType = fieldDecl[2]
                 fieldValue = getattr(self, field)
                 if fieldType == FieldType.SFNode:
-                    result += '\n' + '  ' + indent + field + + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                    result += '\n' + '  ' + indent + field + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
                 if fieldType == FieldType.MFNode:
                     result += '\n' + indent + '  ' + field + ' [' + '\n' + indent + '  ' + '  '
                     for each in fieldValue:
