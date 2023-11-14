@@ -92,3 +92,24 @@ print (x3d.VRML())
 #fp = open("dump_case2.x3d","w+")
 #fp.write(blob)
 #fp.close()
+
+# There are a few TODOs:
+
+# - also descend into SFNode fields, before children.
+# - Currently, only the children field is walked. Walk all MFNode fields.
+# - be more careful when swapping nodes. If a DEF node is moved up, some
+# of its children which are USE may now be placed before their
+# corresponding DEF. This means rinse and repeat until no more USE
+# before DEF occurs. Also, probably best to deal with duplicate DEF
+# until after all USE before DEF is corrected.
+# - In case of multiple MFNode fields (children2, children1) x3d.py XML
+# output is sorted with xsl:sort alphabetically using the field nodes as
+# defined in the InterfaceDefinitions in x3duom. Since 'name' is the
+# first attribute of these field nodes in x3duom, I think it means they
+# are sorted by field name (children1, children2). Since
+# node.FIELD_DECLARATIONS() would be used to go through all fields,
+# hopefully MFNode fields would already be listed there in the same
+# order.
+# - Possibly, take into account initial constructor call argument order
+# when walking the graph: Eg. first fields in order of caller, then
+# remaining SFNode, then remaining MFNode.
