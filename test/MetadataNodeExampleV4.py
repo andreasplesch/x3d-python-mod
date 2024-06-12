@@ -24,7 +24,7 @@
 #
 ####################################################################################################
 
-from x3dcf import *
+from x3dkw import *
 
 newModel=X3D(profile='Immersive',version='4.0',
   head=head(
@@ -59,6 +59,7 @@ newModel=X3D(profile='Immersive',version='4.0',
       #  Structured information can go in Metadata nodes. Note that any X3D node can contain a single Metadata node with containerField='metadata' 
       metadata=MetadataSet(DEF='MyMetadataSetNode',name='Metadata_name',reference='SomeReferenceStandard 1.2.3c',
         value=[
+        MetadataSet(DEF='MyMetadatSetNode2',name='should be first'),
         MetadataBoolean(DEF='MyMetadataBooleanNode',name='Coin Flip',reference='MetadataBoolean supported in X3D v3.3 and later',value=[True,False,True,False]),
         MetadataDouble(DEF='MyMetadataDoubleNode',name='Metadata_name',reference='SomeReferenceStandard 1.2.3c',value=[3.141592658,2.71812181]),
         MetadataFloat(DEF='MyMetadataFloatNode',name='Metadata_name',reference='SomeReferenceStandard 1.2.3c',value=[9.8,6.023e+23]),
@@ -97,7 +98,7 @@ print(newModelXML) # diagnostic
 try:
 #   print('check newModel.VRML() serialization...')
     newModelVRML=newModel.VRML() # test export method VRML() for exceptions during export
-    # print(prependLineNumbers(newModelVRML)) # debug
+    print(prependLineNumbers(newModelVRML)) # debug
     print("Python-to-VRML export of VRML output successful", flush=True)
 except Exception as err: # usually BaseException
     # https://stackoverflow.com/questions/18176602/how-to-get-the-name-of-an-exception-that-was-caught-in-python

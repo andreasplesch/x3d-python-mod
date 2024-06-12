@@ -226,6 +226,39 @@ _DEBUG = False       # options True False
 
 ###############################################
 
+# Override this function in your application code
+# VVVVVV   PROPOSED CHANGE, ADD THESE LINES  VVVVVV
+defusetable = {}
+
+def initdefuse():
+    defusetable = {}
+
+def defuse(node):
+   return node
+
+# copy this to your code that uses DAGs
+def defuse(node):
+    if hasattr(node, 'DEF'):
+        if node.DEF in defusetable:
+            usenode = type(node)(USE=node.DEF)
+            return usenode
+        elif node.USE in defusetable:
+            usenode = type(node)(USE=node.USE)
+            return usenode
+        elif node.DEF:
+            defusetable.update({node.DEF : node})
+            return node
+        elif node.USE:
+            # USE found, not in defusetable, but no DEF, switch to DEF
+            #node.DEF = node.USE
+            #defusetable.update({node.DEF : node})
+            return node
+        else:
+            return node
+    else: # no USE or DEF
+        # what do we do if there are multiple parents?
+        return node
+
 # SimpleType Enumerations
 </xsl:text>
 
@@ -600,6 +633,39 @@ class _X3DStatement:
         return result.strip().rstrip(',').rstrip(', ') + ')'
     def __str__(self):
         return self.__repl__().strip() # _X3DStatement
+    def XMLforNodeFields(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result
+    def VRMLforNodeFields(self, fields={}, indentLevel=0, syntax='VRML', VRML97=False):
+        result = ''
+        indent = '  ' * indentLevel
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += '\n' + '  ' + indent + field + + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                if fieldType == FieldType.MFNode:
+                    result += '\n' + indent + '  ' + field + ' [' + '\n' + indent + '  ' + '  '
+                    for each in fieldValue:
+                        result += each.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                    result += '\n' + indent + '  ' + ']' + '\n' + indent
+        return result
 
 def isX3DStatement(value):
     """
@@ -2790,6 +2856,40 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     def __str__(self):
         return self.__repl__().strip() # </xsl:text>
                 <xsl:value-of select="@name"/>
+                <xsl:text>
+    def XMLforNodeFields(self, fields={}, indentLevel=0, syntax='XML'):
+        result = ''    
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += fieldValue.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+                if fieldType == FieldType.MFNode:
+                    for each in fieldValue:
+                        result += each.XML(indentLevel=indentLevel+1, syntax=syntax, field=field)
+        return result
+    def VRMLforNodeFields(self, fields={}, indentLevel=0, syntax='VRML', VRML97=False):
+        result = ''
+        indent = '  ' * indentLevel
+        if not self.FIELD_DECLARATIONS:
+            return result
+        for field in fields: # output fields in order of argument dictionary
+            if hasattr(self, field): # ignore any non-field arguments
+                fieldDecl = [ decl for decl in self.FIELD_DECLARATIONS() if field in decl ][0] # find fieldtype
+                fieldType = fieldDecl[2]
+                fieldValue = getattr(self, field)
+                if fieldType == FieldType.SFNode:
+                    result += '\n' + '  ' + indent + field + ' ' + fieldValue.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                if fieldType == FieldType.MFNode:
+                    result += '\n' + indent + '  ' + field + ' [' + '\n' + indent + '  ' + '  '
+                    for each in fieldValue:
+                        result += each.VRML(indentLevel=indentLevel+1, VRML97=VRML97)
+                    result += '\n' + indent + '  ' + ']' + '\n' + indent
+        return result</xsl:text>
             </xsl:when>
 <!-- __str__ not needed if __repl__ is satisfactory
     def __str__(self):
@@ -2890,8 +2990,8 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
     </xsl:text>
     
         <xsl:variable name="tooltipText"><!-- /attribute[@name = $fieldName] -->
-            <xsl:value-of select="$elementName" />
-            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/@tooltip" disable-output-escaping="yes"/>-->
+            <!--<xsl:value-of select="$elementName" />-->
+            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/@tooltip" disable-output-escaping="yes"/>
         </xsl:variable>
         <xsl:variable name="fieldTooltip">
             <xsl:if test="(string-length(normalize-space($tooltipText)) > 0)"><!-- doc-available($x3d.tooltips.path) -->
@@ -2908,7 +3008,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <xsl:value-of select="$annotation"/>
             </xsl:when>
             <xsl:when test="(string-length(normalize-space($fieldTooltip)) > 0)">
-                <!--<xsl:value-of select="substring-before($fieldTooltip,'.')"/>-->
+                <xsl:value-of select="substring-before($fieldTooltip,'.')"/>
                 <xsl:text>.</xsl:text>
                 <xsl:message>
                     <xsl:text>*** Warning: annotation not found in X3DUOM, used tooltip as docstring for </xsl:text>
@@ -3474,13 +3574,13 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     <xsl:choose>
                         <xsl:when test="($elementName = 'meta') and ($fieldName = 'httpequiv')">
                             <!-- some field names got munged -->
-                            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = 'http-equiv']/@tooltip" disable-output-escaping="yes"/>-->
-                            <xsl:value-of select="$elementName"/>
+                            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = 'http-equiv']/@tooltip" disable-output-escaping="yes"/>
+                            <!--<xsl:value-of select="$elementName"/>-->
                         </xsl:when>
                         <xsl:otherwise>
                             <!-- some field names have underscores to avoid collisions with Python reserved words -->
-                            <!--<xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = translate($fieldName,'_','')]/@tooltip" disable-output-escaping="yes"/>-->
-                            <xsl:value-of select="$elementName"/>
+                            <xsl:value-of select="$x3d.tooltips.document//element[@name = $elementName]/attribute[@name = translate($fieldName,'_','')]/@tooltip" disable-output-escaping="yes"/>
+                            <!--<xsl:value-of select="$elementName"/>-->
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
@@ -3916,10 +4016,11 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                 <!-- opening tag is unclosed since followed by attributes -->
                 <xsl:value-of select="$elementName"/>
                 <xsl:text>'</xsl:text>
-                <!-- TODO: always output metadata containerfields value and metadata -->
                 <xsl:text>
         if (self.CONTAINERFIELD_DEFAULT() != '') &amp; (self.CONTAINERFIELD_DEFAULT() != field):
             result += " containerField='" + field + "'"</xsl:text>
+                <xsl:text>
+        self = defuse(self)  # PROPOSED CHANGE, ADD THIS LINE</xsl:text>
                 <!-- opening tag is unclosed since followed by attributes -->
                 <!-- output simple-type fields as XML attributes -->
                 <xsl:for-each select="$allFields[not(contains(@type,'Node')) and not(@name = 'sourceCode')]">
@@ -3940,8 +4041,20 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     </xsl:variable>
                     <!-- avoid duplicate fields problem in X3DUOM, e.g. ParticleSet geometry (TODO fix X3DUOM) -->
                     <xsl:if test="not(preceding-sibling::*[@name = $fieldName])">
+                        <xsl:choose>
+                            <xsl:when test="($fieldName = 'DEF')">
                         <xsl:text>
         if </xsl:text>
+                            </xsl:when>
+                            <xsl:when test="($fieldName = 'USE')">
+                        <xsl:text>
+        if </xsl:text>
+                            </xsl:when>
+                            <xsl:otherwise>
+                        <xsl:text>
+        if (not hasattr(self, 'USE') or not self.USE) and </xsl:text>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <xsl:choose>
                             <xsl:when test="(@type = 'SFBool')">
                                 <xsl:if test="(@default = 'true')">
@@ -4108,11 +4221,10 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                 <xsl:text> + "'"</xsl:text>
                             </xsl:otherwise>
                         </xsl:choose>
-                        
                     </xsl:if>
                 </xsl:for-each>
                 <xsl:text>
-        if not self.hasChild()</xsl:text>
+        if (not hasattr(self,'USE') or not self.USE) and not self.hasChild()</xsl:text>
             <xsl:if test="(@name = 'Script') or (@name = 'ShaderProgram') or (@name = 'ShaderPart')">
                 <xsl:text> and not self.sourceCode</xsl:text>
             </xsl:if>
@@ -4145,14 +4257,15 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                         result += each.XML(indentLevel=indentLevel+1, syntax=syntax)</xsl:text>
                     </xsl:when>
                     <xsl:otherwise>
+                        <xsl:text>
+            result += self.XMLforNodeFields(fields=self.callerargs, indentLevel=indentLevel, syntax=syntax)</xsl:text>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
-            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
+                            <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                            <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
 			    <!--<xsl:sort select="@name" order="ascending"/>-->
-
                             <xsl:variable name="fieldName">
                                 <xsl:call-template name="fieldName">
                                     <xsl:with-param name="name" select="@name"/>
@@ -4578,6 +4691,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                   not($elementName = 'Scene')">
                     <!-- also see below; TODO simpler construct possible? -->
                     <xsl:text>
+        # self = defuse(self)  # PROPOSED CHANGE, ADD THIS LINE
         if self.DEF:
             result += 'DEF ' + self.DEF + ' ' + '</xsl:text>
                     <xsl:value-of select="$elementName"/>
@@ -4694,9 +4808,13 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                     </xsl:if>
                 </xsl:for-each>
                 <!-- output child SFNode/MFNode fields as child XML elements -->
+                <xsl:if test="$allFields[contains(@type,'Node')]">
+                    <xsl:text>
+        result += self.VRMLforNodeFields(self.callerargs, indentLevel=indentLevel, VRML97=VRML97)</xsl:text>
+                </xsl:if>
                         <xsl:for-each select="$allFields[contains(@type,'Node')]">
-            		    <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
-            		    <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
+                            <xsl:sort select="(@type='MFNode') and (@name = 'skeleton')" order="descending"/>
+                            <xsl:sort select="(@type='MFNode') and not(@name = 'skeleton')"/>
                             <xsl:sort select="(@type='SFNode')"/>
                             <xsl:sort select="(@name = 'ProtoBody')"/>
                             <xsl:sort select="(@name = 'ProtoInterface')"/>
@@ -4729,7 +4847,9 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                         <xsl:text>
         if self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
-                        <xsl:text>: # output this SFNode
+                        <xsl:text> and '</xsl:text>
+                        <xsl:value-of select="$fieldName"/>
+                        <xsl:text>' not in self.callerargs: # output this SFNode
             result += '\n' + '  ' + indent + '</xsl:text><!-- one further indent -->
                         <xsl:value-of select="$fieldName"/>
                         <xsl:text> ' + self.</xsl:text>
@@ -4741,7 +4861,9 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                         <xsl:text>
         if self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
-                        <xsl:text>: # walk each child in list, if any (avoid empty list recursion)
+                        <xsl:text> and '</xsl:text>
+                        <xsl:value-of select="$fieldName"/>
+                        <xsl:text>' not in self.callerargs: # output this MFNode, walk each child in list, if any (avoid empty list recursion)
             result += '\n' + indent + '  ' + '</xsl:text><xsl:value-of select="$fieldName"/><xsl:text> [' + '\n' + indent + '  ' + '  '
             for each in self.</xsl:text>
                         <xsl:value-of select="$fieldName"/>
@@ -4766,7 +4888,7 @@ def assertValidFieldInitializationValue(name, fieldType, value, parent=''):
                                   not($elementName = 'head') and not($elementName = 'component') and not($elementName = 'meta') and not($elementName = 'unit') and
                                   not($elementName = 'Scene')">
                         <xsl:text>
-        if not self.USE:
+        if not hasattr(self,'USE') or not self.USE:
             result += '\n' + indent + '}' +  '\n' + indent</xsl:text>
                   </xsl:when>
                   <xsl:otherwise>
